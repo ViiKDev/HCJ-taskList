@@ -5,13 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="wwwroot/css/style.css">
     <title>Task List</title>
 </head>
 
 <body>
 
+    <div class="content">
+        <div class="top">
+            <input type="text" id="inputNewTask" placeholder="Add a new task">
+            <button id="btnAddTask">
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+
+        <ul id="taskList">
+        </ul>
+    </div>
+
+    <div id="modalScreen">
+        <button id="btnEditModalClose">
+            <i class="fa fa-remove"></i>
+        </button>
+        <h2 id="editTaskId">#0</h2>
+        <hr>
+        <form>
+            <div class="frm-line">
+                <label for="name">Name</label>
+                <input type="text" id="inputTaskNameEdit" placeholder="Input a name">
+            </div>
+            <div class="frm-line">
+                <button id="btnUpdateTask">Save</button>
+            </div>
+        </form>
+    </div>
+    <div id="modalBackground"></div>
+
 </body>
-<script src="js/script.js"></script>
+<script src="wwwroot/js/script.js"></script>
 
 </html>

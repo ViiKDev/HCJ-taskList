@@ -1,0 +1,184 @@
+:root {
+    --modal-open: none;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 450px;
+    margin-top: 50px;
+    background-color: #2b2a2a;
+    padding: 55px;
+    border-radius: 12px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.top input {
+    width: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #191818;
+    outline: none;
+    font-size: 1.2rem;
+    background-color: #191818;
+    color: #fff;
+}
+
+.top button {
+    width: 45px;
+    border-radius: 12px;
+    border: 1px solid #191818;
+    background-color: #191818;
+    color: #fff;
+    outline: none;
+}
+
+.top button:hover {
+    background-color: #1f1e1e;
+    cursor: pointer;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#taskList li {
+    padding: 20px;
+    background-color: #191818;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btnAction {
+    border-radius: 20px;
+    border: 1px solid #191818;
+    width: 38px;
+    height: 38px;
+    margin-right: 8px;
+    cursor: pointer;
+    background-color: #2b2a2a;
+    color: #fff;
+}
+
+.btnAction:hover {
+    background-color: #3c3a3a;
+}
+
+#modalBackground {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    opacity: .9;
+    background-color: #000;
+    display: var(--modal-open);
+}
+
+#modalScreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #191818;
+    border: 1px solid #2f2e2e;
+    width: 415px;
+    border-radius: 12px;
+    z-index: 101;
+    display: var(--modal-open);
+}
+
+#modalScreen form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#btnEditModalClose {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+#btnEditModalClose:hover {
+    border: 1px solid #2d2c2c;
+    background-color: #2d2c2c;
+}
+
+.frm-line {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.frm-line label {
+    margin-bottom: 7px;
+}
+
+.frm-line input {
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #191818;
+    font-size: 1.2rem;
+    background-color: #2d2c2c;
+    color: #fff;
+}
+
+.frm-line input:not(.error) {
+    outline: none;
+}
+
+.frm-line input.error {
+    outline: 2px solid red;
+}
+
+.frm-line button {
+    background-color: #2d2c2c;
+    border: 1px solid #191818;
+    padding: 7px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    color: #ccc;
+    cursor: pointer;
+    height: 50px;
+    font-size: 1.3rem;
+    outline: none;
+}
+
+.frm-line button:hover {
+    background-color: #3c3a3a;
+}
+
+.taskText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 290px;
+    white-space: nowrap;
+}
